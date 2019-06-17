@@ -4,3 +4,4 @@ CTL+T 从GIT上更新
 Alt+enter  代码修改提示
 Ctrl+X   不选中剪切一整行
 Ctrl+Y   删除已整行
+ctrl+alt+t 添加try/catch的快捷键

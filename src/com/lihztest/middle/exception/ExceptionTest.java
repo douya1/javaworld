@@ -1,4 +1,4 @@
-package com.lihztest.middle;
+package com.lihztest.middle.exception;
 
 import java.io.File;
 import java.io.FileInputStream;
