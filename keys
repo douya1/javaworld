@@ -3,5 +3,7 @@ CTL+K 提交到git
 CTL+T 从GIT上更新
 Alt+enter  代码修改提示
 Ctrl+X   不选中剪切一整行
+Ctrl+D   赋值到下一行
 Ctrl+Y   删除已整行
 ctrl+alt+t 添加try/catch的快捷键
+Ctrl+Shift+f7 高亮显示变量在当前文件中的用法  F3下一个 Shift+F3 上一个     ESC退出
