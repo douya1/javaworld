@@ -12,15 +12,25 @@ public class StreamTest2 {
 
     public static void main(String[] args) {
 
+        //splitFile();
+
+    }
+
+    public static void assemblyFile(){
+
+    }
+
+    public static  void splitFile(){
         File f = new File("D:/testFile/1.pdf");
-        byte [] data = new byte[100];
+        byte [] data = new byte[1024*1024];
         try {
             FileInputStream fis = new FileInputStream(f);
             int i = 0;
-            while (fis.read() != -1){
+            int len;
+            while ((len =fis.read(data)) != -1){
                 File f2 = new File("D:/testFile/1.pdf" + "-"+ i++);
                 FileOutputStream fos = new FileOutputStream(f2);
-                fos.write(data);
+                fos.write(data,0,len);
                 fos.close();
             }
             fis.close();
