@@ -1,9 +1,17 @@
 package com.lihztest.oot;
 
-public class Hero {
+public class Hero implements Col{
 
     String name; //名字
     float hp;  //血量
+
+    public Hero(String name){
+        this.name = name;
+    }
+
+    public Hero(){
+        super();
+    }
 
     public void attackHero(Hero hero) throws EnemyHeroIdDeadException {
         if(hero.hp == 0)

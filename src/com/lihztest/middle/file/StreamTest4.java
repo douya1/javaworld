@@ -38,5 +38,6 @@ public class StreamTest4 {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return null;
     }
 }
