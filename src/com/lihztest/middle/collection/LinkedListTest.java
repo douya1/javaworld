@@ -9,7 +9,8 @@ public class LinkedListTest {
 
     public static void main(String[] args) {
 
-        fun();
+        //fun();
+        fun2();
     }
 
     static void fun(){
@@ -31,7 +32,13 @@ public class LinkedListTest {
     //realize Stack
     static  void fun2(){
 
-
+        MyStack stack = new MyStack();
+        for(int i=0 ;i<5; i++){
+            stack.push(new Hero("hero " +i));
+        }
+        System.out.println(stack);
+        stack.pull();
+        System.out.println(stack);
 
     }
 }

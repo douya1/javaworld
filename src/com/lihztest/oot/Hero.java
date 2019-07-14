@@ -2,6 +2,14 @@ package com.lihztest.oot;
 
 public class Hero implements Col{
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     String name; //名字
     float hp;  //血量
 

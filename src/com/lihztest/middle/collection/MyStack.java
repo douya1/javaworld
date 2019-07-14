@@ -1,33 +1,36 @@
 package com.lihztest.middle.collection;
 
-import java.util.Stack;
+import java.util.LinkedList;
 
 public class MyStack implements Stack {
 
+    public MyStack(){
+
+        list = new LinkedList();
+    }
+
+    LinkedList<Object>  list;
 
 
     @Override
-    public Object push(Object item) {
-        return super.push(item);
+    public void push(Object a) {
+        list.addLast(a);
     }
 
     @Override
-    public synchronized Object pop() {
-        return super.pop();
+    public Object pull() {
+        return list.removeLast();
     }
 
     @Override
-    public synchronized Object peek() {
-        return super.peek();
+    public Object peek() {
+        return list.getLast();
     }
 
     @Override
-    public boolean empty() {
-        return super.empty();
-    }
-
-    @Override
-    public synchronized int search(Object o) {
-        return super.search(o);
+    public String toString() {
+        return "MyStack{" +
+                "list=" + list +
+                '}';
     }
 }
