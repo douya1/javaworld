@@ -1,5 +1,7 @@
 package com.lihztest.middle.collection;
 
+import com.lihztest.oot.Hero;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -12,7 +14,27 @@ public class CollectionsTest {
       //  sort();
 //        swap();
 //        rotate();
-        test();;
+        //test();;
+        listDoTimeTest();
+    }
+
+    static void listDoTimeTest(){
+
+        ArrayList<Hero> list =  new ArrayList<Hero>();
+        for(int i=0; i<200*100*100;i++){
+
+            list.add(new Hero("hero-"+i));
+        }
+        for(int i=0; i<10; i++){
+            long start = System.currentTimeMillis();
+            Collections.shuffle(list);
+            String temp = "hero-1000000";
+            for(Hero h:list)
+                if(temp.equals(h.getName()))
+                    break;
+            long end = System.currentTimeMillis();
+            System.out.printf("the %d excute times is %d ms\n", i,end-start);
+        }
     }
 
     static void test(){
