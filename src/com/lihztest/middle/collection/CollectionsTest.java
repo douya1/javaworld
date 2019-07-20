@@ -2,9 +2,7 @@ package com.lihztest.middle.collection;
 
 import com.lihztest.oot.Hero;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
+import java.util.*;
 
 public class CollectionsTest {
     public static void main(String[] args) {
@@ -15,7 +13,55 @@ public class CollectionsTest {
 //        swap();
 //        rotate();
         //test();;
-        listDoTimeTest();
+        //listDoTimeTest();
+        sortHero1();
+        //treeSetSort();
+    }
+
+    static void treeSetSort(){
+        Random r = new Random();
+        Comparator<Integer> c = new Comparator<Integer>() {
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                return o2-o1;
+            }
+        };
+        TreeSet<Integer> ti= new TreeSet<>(c);
+        for(int i=0;i<10;i++){
+            ti.add(r.nextInt(100));
+        }
+        System.out.println(ti);
+    }
+
+    static void sortHero2(){
+
+
+        Random r = new Random();
+        ArrayList<Hero> hs = new ArrayList<>();
+        for(int i = 0; i< 10;i++) {
+            hs.add(new Hero("hero-" + i, r.nextInt(100)));
+        }
+        System.out.println(hs);
+        Collections.sort(hs);
+        System.out.println(hs);
+    }
+
+    static void sortHero1(){
+        Random r = new Random();
+        ArrayList<Hero> hs = new ArrayList<>();
+        for(int i = 0; i< 10;i++) {
+            hs.add(new Hero("hero-" + i, r.nextInt(100)));
+        }
+      /*  Comparator<Hero> c = new Comparator<Hero>() {
+            @Override
+            public int compare(Hero o1, Hero o2) {
+                return o1.getHp()>o2.getHp()?1:-1;
+            }
+        };*/
+        System.out.println(hs);
+        //Collections.sort(hs,c);
+        Collections.sort(hs,((o1,o2)->o1.getHp()>o2.getHp()?1:-1));
+        System.out.println(hs);
     }
 
     static void listDoTimeTest(){

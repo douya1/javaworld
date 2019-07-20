@@ -1,6 +1,6 @@
 package com.lihztest.oot;
 
-public class Hero implements Col{
+public class Hero implements Col,Comparable<Hero>{
 
     public String getName() {
         return name;
@@ -21,14 +21,29 @@ public class Hero implements Col{
         super();
     }
 
+    public float getHp() {
+        return hp;
+    }
+
+    public  Hero(String name , int hp){
+        this.name =name;
+        this.hp =hp;
+    }
+
     public void attackHero(Hero hero) throws EnemyHeroIdDeadException {
         if(hero.hp == 0)
         {
             throw new EnemyHeroIdDeadException(hero.name + "is die");
         }
     }
-    public String toString(){
-        return name;
+
+
+    @Override
+    public int compareTo(Hero o) {
+        if(hp>= o.getHp())
+            return 1;
+        else
+            return -1;
     }
 
     class EnemyHeroIdDeadException extends Exception{
@@ -38,6 +53,14 @@ public class Hero implements Col{
         public EnemyHeroIdDeadException(String msg){
             super(msg);
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Hero{" +
+                "name='" + name + '\'' +
+                ", hp=" + hp +
+                '}';
     }
 
     public static void main(String[] args) {
@@ -55,5 +78,9 @@ public class Hero implements Col{
             System.out.println("异常的原因是: " + e.getMessage());
             e.printStackTrace();
         }
+    }
+
+    public boolean  macthed(Hero h){
+        return h.getHp()>500;
     }
 }

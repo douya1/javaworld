@@ -8,11 +8,14 @@ import java.util.ArrayList;
 public class Test1 {
     public static void main(String[] args) {
 
+        String str = "1234567890";
+        System.out.println(str.substring(3,5));
+
         //fun1();
         //fun2();
         //fun3();
         //fun4();
-        searchHero();
+        //searchHero();
     }
 
     static  void searchHero(){
