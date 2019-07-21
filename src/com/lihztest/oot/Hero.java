@@ -80,7 +80,7 @@ public class Hero implements Col,Comparable<Hero>{
         }
     }
 
-    public boolean  macthed(Hero h){
-        return h.getHp()>500;
+    public boolean  macthed(){
+        return this.hp >500;
     }
 }

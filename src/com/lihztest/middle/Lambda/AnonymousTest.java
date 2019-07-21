@@ -27,8 +27,10 @@ public class AnonymousTest {
         //filter(as,h->testHero(h));
         //filter(as, AnonymousTest::testHero);
 
-        AnonymousTest anonymousTest = new AnonymousTest();
-        filter(as, anonymousTest:: testHero2);
+        //AnonymousTest anonymousTest = new AnonymousTest();
+       // filter(as, anonymousTest:: testHero2);
+        //filter(as, h->h.macthed());
+        filter(as, Hero::macthed);
 
     }
 
