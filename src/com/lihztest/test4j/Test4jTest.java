@@ -12,8 +12,9 @@ public class Test4jTest {
     public static void main(String[] args) throws InterruptedException {
 
         //BasicConfigurator.configure();
-        PropertyConfigurator.configure("D:\\javaSet\\javaworld\\src\\log4j.properties");
+        //PropertyConfigurator.configure("D:\\javaSet\\javaworld\\src\\log4j.properties");
         //logger.setLevel(Level.DEBUG);
+        PropertyConfigurator.configure("D:\\javaSet\\javaworld\\src\\log4j.xml");
         logger.trace("跟踪信息");
         logger.debug("调试信息");
         logger.info("输出信息");
