@@ -13,17 +13,17 @@ public class MyStack implements Stack {
 
 
     @Override
-    public void push(Object a) {
+    public synchronized void push(Object a) {
         list.addLast(a);
     }
 
     @Override
-    public Object pull() {
+    public synchronized Object pull() {
         return list.removeLast();
     }
 
     @Override
-    public Object peek() {
+    public synchronized Object peek() {
         return list.getLast();
     }
 

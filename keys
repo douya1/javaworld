@@ -10,3 +10,7 @@ Ctrl+Shift+f7 高亮显示变量在当前文件中的用法  F3下一个 Shift+F
 
 CTRL+O 实现接口/继承父类方法
 ALT+Insert 实现常用方法
+Alt+7 查看class中的方法(窗口)
+Ctrl+F12 查看class中的方法，弹窗。
+Ctrl+Alt+<-后退
+Ctrl+Alt+-> 前进

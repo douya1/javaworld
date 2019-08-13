@@ -1,26 +1,17 @@
 package com.lihztest.thread;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Vector;
+
 public class Test
 {
-    public  void main(String[] args) {
+    public static void main(String[] args) {
 
-        System.out.println("11111");
+        for(int i=0 ;i<20;i ++){
 
-        Thread t1 = new Thread(){
-            @Override
-            public void run() {
-                int second = 0;
-                while(true){
-                    try {
-                        Thread.sleep(1000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                    System.out.println("after 10s");
-                }
-            }
-        };
-        t1.setDaemon(true);
-        t1.start();
+            char c = (char) (Math.random()*('Z'+1-'A')+ 'A');
+            System.out.println(c);
+        }
     }
 }

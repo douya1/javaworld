@@ -2,6 +2,7 @@ package com.lihztest.middle.collection;
 
 import com.lihztest.oot.Hero;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -32,6 +33,7 @@ public class LinkedListTest {
     //realize Stack
     static  void fun2(){
 
+        ArrayList at;
         MyStack stack = new MyStack();
         for(int i=0 ;i<5; i++){
             stack.push(new Hero("hero " +i));
